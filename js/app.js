@@ -1,4 +1,4 @@
-const API_URL = "https://script.google.com/macros/s/AKfycbxewAVYtjUxZUSBfb0AZbhEzoGTnTF3-ASfiplxU2_eAi3j-jPPTzbTrVmRwyY7N3_m/exec";
+const API_URL = "https://script.google.com/macros/s/AKfycbyjfMlSzROFIx14LM15R24DN0ro80xRzuAWPb8-pcWk7VDG4tR5rqLXeR9kfyhU54XN/exec";
 
 let words = [];
 let currentWord = null;
