@@ -46,10 +46,16 @@ function updateStats() {
 }
 
 async function updateWord(word) {
-  await fetch(API_URL, {
+  const response = await fetch(API_URL, {
     method: "POST",
-    body: JSON.stringify(word),
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(word)
   });
+
+  const result = await response.json();
+  console.log(result);
 }
 
 async function handleAnswer(isCorrect) {
