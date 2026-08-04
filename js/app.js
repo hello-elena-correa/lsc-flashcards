@@ -91,5 +91,6 @@ wrongBtn.addEventListener("click", () => handleAnswer(false));
 
 (async function init() {
   await loadWords();
+  console.log(words);
   showNewWord();
 })();
