@@ -46,6 +46,9 @@ function updateStats() {
 }
 
 async function updateWord(word) {
+
+  console.log("Enviando:", word);
+
   const response = await fetch(API_URL, {
     method: "POST",
     body: JSON.stringify(word)
