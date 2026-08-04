@@ -1,9 +1,11 @@
 const API_URL = "https://script.google.com/macros/s/AKfycbyjfMlSzROFIx14LM15R24DN0ro80xRzuAWPb8-pcWk7VDG4tR5rqLXeR9kfyhU54XN/exec";
 
-console.log("APP VERSION 2026-08-03 19:55");
+console.log("APP VERSION 2026-08-03 20:15");
 
 let words = [];
 let currentWord = null;
+let totalCorrect = 0;
+let totalWrong = 0;
 
 const wordElement = document.getElementById("word");
 const correctBtn = document.getElementById("correctBtn");
@@ -62,10 +64,15 @@ async function updateWord(word) {
 
 async function handleAnswer(isCorrect) {
   if (isCorrect) {
-    currentWord.correct++;
-  } else {
-    currentWord.wrong++;
-  }
+  currentWord.correct++;
+  totalCorrect++;
+} else {
+  currentWord.wrong++;
+  totalWrong++;
+}
+
+correctCountElement.textContent = totalCorrect;
+wrongCountElement.textContent = totalWrong;
 
   await updateWord(currentWord);
 
