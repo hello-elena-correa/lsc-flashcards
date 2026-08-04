@@ -14,13 +14,7 @@ const levelElement = document.getElementById("level");
 
 async function loadWords() {
   const response = await fetch(API_URL);
-
-  console.log(response.status);
-  console.log(response.redirected);
-  console.log(response.url);
-
-  const text = await response.text();
-  console.log(text.substring(0, 300));
+  words = await response.json();
 }
 
 function getWeightedRandom(words) {
