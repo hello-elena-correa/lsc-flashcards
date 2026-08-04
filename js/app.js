@@ -1,6 +1,6 @@
 const API_URL = "https://script.google.com/macros/s/AKfycbyjfMlSzROFIx14LM15R24DN0ro80xRzuAWPb8-pcWk7VDG4tR5rqLXeR9kfyhU54XN/exec";
 
-console.log("APP VERSION 2026-08-03 20:15");
+console.log("APP VERSION 2026-08-03 20:20");
 
 let words = [];
 let currentWord = null;
@@ -45,8 +45,8 @@ function showNewWord() {
 }
 
 function updateStats() {
-  correctCountElement.textContent = currentWord.correct;
-  wrongCountElement.textContent = currentWord.wrong;
+  correctCountElement.textContent = totalCorrect;
+  wrongCountElement.textContent = totalWrong;
 }
 
 async function updateWord(word) {
