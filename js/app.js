@@ -1,6 +1,6 @@
 const API_URL = "https://script.google.com/macros/s/AKfycbyjfMlSzROFIx14LM15R24DN0ro80xRzuAWPb8-pcWk7VDG4tR5rqLXeR9kfyhU54XN/exec";
 
-console.log("APP VERSION 2026-08-03 20:20");
+console.log("APP VERSION 2026-09-03 00:20");
 
 let words = [];
 let currentWord = null;
@@ -16,9 +16,16 @@ const levelElement = document.getElementById("level");
 
 async function loadWords() {
   const response = await fetch(API_URL);
-  words = await response.json();
-}
+  const data = await response.json();
 
+  words = data.words;
+
+  totalCorrect = data.stats.correct;
+  totalWrong = data.stats.wrong;
+
+  correctCountElement.textContent = totalCorrect;
+  wrongCountElement.textContent = totalWrong;
+}
 function getWeightedRandom(words) {
   const weights = words.map(word => {
     return (word.wrong + 1) / (word.correct + 1);
