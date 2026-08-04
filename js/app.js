@@ -1,5 +1,7 @@
 const API_URL = "https://script.google.com/macros/s/AKfycbyjfMlSzROFIx14LM15R24DN0ro80xRzuAWPb8-pcWk7VDG4tR5rqLXeR9kfyhU54XN/exec";
 
+console.log("APP VERSION 2026-08-03 19:38");
+
 let words = [];
 let currentWord = null;
 
