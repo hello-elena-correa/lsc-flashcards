@@ -69,8 +69,9 @@ async function handleAnswer(isCorrect) {
 
   await updateWord(currentWord);
 
-  // 🔥 SINCRONIZAR DE NUEVO DESDE EL BACKEND
   await loadWords();
+
+  console.log(words.find(w => w.text === currentWord.text));
 
   showNewWord();
 }
