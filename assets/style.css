@@ -1,10 +1,10 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Nunito", sans-serif;
   background-color: #f4f6f8;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
   margin: 0;
 }
 
@@ -14,14 +14,171 @@ body {
   max-width: 400px;
 }
 
+h1 {
+  font-family: "Fredoka", sans-serif;
+  font-size: 38px;
+  font-weight: 600;
+  margin: 0 0 25px;
+  color: #171717;
+}
+
 .card {
   background: white;
   padding: 40px;
-  border-radius: 12px;
+  border-radius: 16px;
   font-size: 24px;
   font-weight: bold;
   margin: 20px 0;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 5px 14px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================
+   START SCREEN
+   ========================= */
+
+.start-card {
+  padding: 35px 30px;
+}
+
+.start-icon {
+  font-size: 42px;
+  margin-bottom: 12px;
+}
+
+.start-card h2 {
+  font-family: "Fredoka", sans-serif;
+  font-size: 25px;
+  font-weight: 600;
+  margin: 0;
+  color: #222;
+}
+
+.start-text {
+  font-size: 15px;
+  font-weight: 500;
+  color: #777;
+  margin: 8px 0 25px;
+}
+
+
+/* Level buttons */
+
+.level-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.level-button {
+  width: 100%;
+  min-height: 56px;
+
+  border: none;
+  border-radius: 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  font-family: "Nunito", sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.level-button:hover {
+  transform: translateY(-2px);
+}
+
+.level-button:active {
+  transform: translateY(0);
+}
+
+
+/* All levels */
+
+.all-levels {
+  background-color: #4a90e2;
+  color: white;
+  box-shadow: 0 4px 8px rgba(74, 144, 226, 0.25);
+}
+
+.all-levels:hover {
+  background-color: #3d82d2;
+}
+
+.button-icon {
+  font-size: 21px;
+}
+
+
+/* Level numbers */
+
+.level-number {
+  width: 30px;
+  height: 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  color: white;
+  font-family: "Fredoka", sans-serif;
+  font-size: 17px;
+}
+
+
+/* Level 1 */
+
+.level-one {
+  background-color: #e8f5ed;
+  color: #26734d;
+}
+
+.level-one .level-number {
+  background-color: #4caf76;
+}
+
+
+/* Level 2 */
+
+.level-two {
+  background-color: #fff4dc;
+  color: #9a6a16;
+}
+
+.level-two .level-number {
+  background-color: #f2b632;
+}
+
+
+/* Level 3 */
+
+.level-three {
+  background-color: #fde9e7;
+  color: #b8463d;
+}
+
+.level-three .level-number {
+  background-color: #e85c54;
+}
+
+
+/* =========================
+   GAME SCREEN
+   ========================= */
+
+.game-screen {
+  display: none;
 }
 
 .stats {
@@ -41,7 +198,7 @@ body {
 }
 
 #correctBtn {
-  background-color: #4CAF50;
+  background-color: #4caf50;
   color: white;
 }
 
@@ -54,4 +211,43 @@ body {
   font-size: 14px;
   color: #666;
   margin-top: 10px;
+}
+
+/* Review section */
+.review-section {
+  margin-top: 20px;
+}
+
+.review-toggle {
+  width: 100%;
+  padding: 12px 18px;
+  border: none;
+  border-radius: 10px;
+  background-color: #f3f0ff;
+  color: #6654a8;
+  font-family: "Nunito", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.15s ease, background-color 0.15s ease;
+}
+
+.review-toggle:hover {
+  background-color: #e9e4ff;
+  transform: translateY(-1px);
+}
+
+.review-toggle:active {
+  transform: translateY(0);
+}
+
+.review-list {
+  display: none;
+  margin-top: 8px;
+  padding: 12px 16px;
+  background-color: #faf9ff;
+  border-radius: 10px;
+  text-align: left;
+  font-size: 14px;
+  color: #555;
 }
