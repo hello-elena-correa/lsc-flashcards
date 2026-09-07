@@ -29,6 +29,8 @@ const reviewToggle = document.getElementById("reviewToggle");
 const reviewCount = document.getElementById("reviewCount");
 const reviewList = document.getElementById("reviewList");
 
+const backToMenuBtn = document.getElementById("backToMenuBtn");
+
 function updateReviewList() {
 
   reviewCount.textContent = forgottenWords.length;
@@ -227,6 +229,12 @@ reviewToggle.addEventListener("click", () => {
   } else {
     reviewList.style.display = "block";
   }
+});
+
+/* Back to menu */
+backToMenuBtn.addEventListener("click", () => {
+  gameScreen.style.display = "none";
+  startScreen.style.display = "block";
 });
 
 
