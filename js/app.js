@@ -118,20 +118,6 @@ function updateStats() {
 }
 
 
-async function updateWord(word, isCorrect) {
-  const response = await fetch(API_URL, {
-    method: "POST",
-    body: JSON.stringify({
-      text: word.text,
-      level: word.level,
-      isCorrect: isCorrect,
-    }),
-  });
-
-  await response.json();
-}
-
-
 async function handleAnswer(isCorrect) {
 
   if (isCorrect) {
@@ -157,10 +143,6 @@ async function handleAnswer(isCorrect) {
   }
 
   updateStats();
-
-  await updateWord(currentWord, isCorrect);
-
-  await loadWords();
 
   showNewWord();
 }
