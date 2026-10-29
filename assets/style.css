@@ -173,6 +173,18 @@ h1 {
 }
 
 
+/* Level 4 */
+
+.level-four {
+  background-color: #dd6e1d7d;
+  color: #97470d;
+}
+
+.level-four .level-number {
+  background-color: #f37017;
+}
+
+
 /* =========================
    GAME SCREEN
    ========================= */
