@@ -52,6 +52,7 @@ const levelButtons = [
   level1Btn,
   level2Btn,
   level3Btn,
+  level4Btn,
 ];
 
 levelButtons.forEach((button) => {
@@ -202,6 +203,10 @@ level2Btn.addEventListener("click", () => {
 
 level3Btn.addEventListener("click", () => {
   selectLevel("Level3");
+});
+
+level4Btn.addEventListener("click", () => {
+  selectLevel("Level4");
 });
 
 /* Review list toggle */
